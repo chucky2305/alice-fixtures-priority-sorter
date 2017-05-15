@@ -1,0 +1,6 @@
+services:
+    mybundle.fixtures.loader.order:
+        class:     TestingBundle\Service\Alice\OrderMultiPassLoader
+        decorates: fidry_alice_data_fixtures.loader.multipass_file
+        arguments: ['@mybundle.fixtures.loader.order.inner']
+        public: false
